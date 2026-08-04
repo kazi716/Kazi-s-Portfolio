@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kazi Md Samim Faraj — Portfolio</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body id="kp-root">
+
+<canvas id="kp-particles"></canvas>
+<div class="kp-cursor" id="kp-cursor"></div>
+<div class="kp-cursor-dot" id="kp-cursor-dot"></div>
+<div class="kp-scanline"></div>
+<div class="kp-progress" id="kp-progress"></div>
+
+<div class="kp-hero">
+<div class="kp-avatar-wrap">
+<div class="kp-avatar-ring"></div>
+<div class="kp-avatar-ring-inner"></div>
+<div class="kp-avatar">
+<img src="assets/profile.jpg" alt="Kazi Md Samim Faraj">
+</div>
+</div>
+<h1 class="kp-name">Kazi Md Samim Faraj</h1>
+<p class="kp-title">Cybersecurity & Cloud Engineer</p>
+<p class="kp-loc">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+Kolkata, West Bengal, India
+</p>
+<p class="kp-bio">B.Tech CSE student at JIS University with hands-on experience in cybersecurity, cloud computing, and ethical hacking. Multiple AWS and Google Cloud certifications, OPSWAT ICIP, Anthropic AI Fluency, and practical pentesting through TryHackMe and OverTheWire. Active open-source contributor.</p>
+<div class="kp-socials">
+<a href="https://github.com/kazi716" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.193 22 16.442 22 12.017 22 6.484 17.522 2 12 2z"/></svg>
+GitHub
+</a>
+<a href="https://linkedin.com/in/kazi-md-samim-faraj" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+LinkedIn
+</a>
+<a href="mailto:samimkazi716@gmail.com">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+Email
+</a>
+</div>
+<div style="margin-top:16px"><button id="kp-pdf-btn" style="padding:10px 20px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text-secondary);font-size:13px;cursor:none;transition:all .25s ease-out;display:inline-flex;align-items:center;gap:8px;position:relative;overflow:hidden;font-family:inherit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>Download Resume PDF</button></div>
+</div>
+
+<div class="kp-nav" id="kp-nav">
+<button class="active" data-tab="overview">Overview</button>
+<button data-tab="experience">Experience</button>
+<button data-tab="skills">Skills</button>
+<button data-tab="projects">Projects</button>
+<button data-tab="certs">Certs</button>
+<button data-tab="contact">Contact</button>
+</div>
+<div class="kp-content" id="kp-content">
+<div class="kp-section active" id="tab-overview">
+<p class="kp-sec-title">At a glance</p>
+<div class="kp-stats">
+<div class="kp-stat"><div class="kp-stat-num" style="color:var(--positive)">24+</div><div class="kp-stat-label">Certifications</div></div>
+<div class="kp-stat"><div class="kp-stat-num" style="color:var(--accent)">3</div><div class="kp-stat-label">Internships</div></div>
+<div class="kp-stat"><div class="kp-stat-num" style="color:var(--chart-3)">3+</div><div class="kp-stat-label">PRs merged</div></div>
+<div class="kp-stat"><div class="kp-stat-num" style="color:var(--chart-4)">7.4</div><div class="kp-stat-label">CGPA</div></div>
+</div>
+<p class="kp-sec-title">GitHub Dev Pulse</p><div class="kp-card" id="kp-github-card"><div class="kp-card-head"><p class="kp-card-title" id="gh-username">@kazi716</p><a href="https://github.com/kazi716" target="_blank" rel="noopener" style="font-size:12px;color:var(--accent);text-decoration:none">View Profile →</a></div><div class="kp-stats" style="margin-top:12px;margin-bottom:0"><div class="kp-stat" style="padding:12px 8px"><div class="kp-stat-num" id="gh-repos" style="font-size:24px;color:var(--accent)">--</div><div class="kp-stat-label">Repos</div></div><div class="kp-stat" style="padding:12px 8px"><div class="kp-stat-num" id="gh-streak" style="font-size:24px;color:var(--positive)">--</div><div class="kp-stat-label">Active Days</div></div><div class="kp-stat" style="padding:12px 8px"><div class="kp-stat-num" id="gh-contrib" style="font-size:24px;color:var(--chart-3)">--</div><div class="kp-stat-label">Recent Pushes</div></div><div class="kp-stat" style="padding:12px 8px"><div class="kp-stat-num" id="gh-stars" style="font-size:24px;color:var(--chart-4)">--</div><div class="kp-stat-label">Stars</div></div></div><div id="gh-repos-list" style="margin-top:12px"></div><p id="gh-error" style="font-size:12px;color:var(--warning);display:none;margin-top:8px">Unable to load GitHub data. <a href="https://github.com/kazi716" target="_blank" style="color:var(--accent)">View profile directly</a>.</p></div>
+<p class="kp-sec-title">Career highlights</p>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">AWS AI-Powered Cloud Engineer Intern</p></div>
+<p class="kp-card-meta">AICTE-EduSkills (Virtual) · Grade O (Outstanding)</p>
+<p class="kp-card-time">June – August 2026</p>
+<ul class="kp-card-bullets"><li>Completed 8-week AWS cloud engineering internship with AI-powered tooling</li><li>Curriculum by AWS Educate; certified by AICTE, Ministry of Education</li></ul>
+<div class="kp-tags"><span class="kp-tag accent">Grade O</span><span class="kp-tag info">AWS Educate</span></div>
+</div>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">Brand Ambassador</p></div>
+<p class="kp-card-meta">LaunchEd Global · JIS University</p>
+<p class="kp-card-time">July 2026</p>
+<ul class="kp-card-bullets"><li>Digital outreach, student registrations, program awareness</li></ul>
+</div>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">Marketing Intern</p></div>
+<p class="kp-card-meta">Bleep Education · Remote</p>
+<p class="kp-card-time">January 2026</p>
+<ul class="kp-card-bullets"><li>Recognized for outstanding performance</li><li>Endorsed by E-cell IIT Bombay, IIIT-Naya Raipur, IIT Pune</li></ul>
+</div>
+</div>
+
+<div class="kp-section" id="tab-experience">
+<p class="kp-sec-title">Professional history</p>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">AWS AI-Powered Cloud Engineer Intern</p></div>
+<p class="kp-card-meta">AICTE-EduSkills (Virtual) · Kolkata, India</p>
+<p class="kp-card-time">June 2026 – August 2026</p>
+<ul class="kp-card-bullets"><li>Completed 8-week AWS cloud engineering internship with AI-powered tooling</li><li>Curriculum by AWS Educate; certified by AICTE, Ministry of Education</li><li>Grade O (Outstanding)</li><li>Modules: Cloud 101, Storage, Compute, Networking, Databases, Cloud Ops, Security, Serverless, ML Foundations, Generative AI</li></ul>
+<div class="kp-tags"><span class="kp-tag accent">Grade O</span><span class="kp-tag info">AWS Educate</span></div>
+</div>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">Brand Ambassador</p></div>
+<p class="kp-card-meta">LaunchEd Global · JIS University</p>
+<p class="kp-card-time">July 2026</p>
+<ul class="kp-card-bullets"><li>Selected as campus brand ambassador representing LaunchEd Global</li><li>Responsible for digital outreach, student registrations, and raising program awareness</li></ul>
+</div>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">Marketing Intern</p></div>
+<p class="kp-card-meta">Bleep Education · Remote</p>
+<p class="kp-card-time">January 2026</p>
+<ul class="kp-card-bullets"><li>Recognized for outstanding and professional performance</li><li>Contributed to growth of Bleep Education</li><li>Certificate endorsed by E-cell IIT Bombay, E-cell IIIT-Naya Raipur, and E-cell IIT Pune</li></ul>
+</div>
+</div>
+
+<div class="kp-section" id="tab-education">
+<p class="kp-sec-title">Academic background</p>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">B.Tech — Computer Science and Engineering</p><span class="kp-tag accent">7.4 CGPA</span></div>
+<p class="kp-card-meta">JIS University, Kolkata</p>
+<p class="kp-card-time">2026 – Present · 2nd Year, 3rd Semester</p>
+<div class="kp-tags"><span class="kp-tag">Data Structures</span><span class="kp-tag">Software Engineering</span><span class="kp-tag">OS</span><span class="kp-tag">Computer Architecture</span><span class="kp-tag">AI & ML</span><span class="kp-tag">DBMS</span></div>
+</div>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">Class XII — Higher Secondary</p><span class="kp-tag accent">72%</span></div>
+<p class="kp-card-meta">Shishu Sadan High School</p>
+<p class="kp-card-time">2025</p>
+</div>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">Class X — Secondary</p><span class="kp-tag accent">85%</span></div>
+<p class="kp-card-meta">Shishu Sadan High School</p>
+<p class="kp-card-time">2023</p>
+</div>
+</div>
+
+<div class="kp-section" id="tab-skills">
+<p class="kp-sec-title">Capabilities & stack</p>
+<div class="kp-skill-cat">
+<div class="kp-skill-head">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+<span>Cloud Platforms</span>
+</div>
+<div class="kp-skill-grid">
+<span class="kp-skill-tag">AWS (S3, VPC, RDS)</span>
+<span class="kp-skill-tag">Well-Architected</span>
+<span class="kp-skill-tag">GCP Compute Engine</span>
+<span class="kp-skill-tag">Cloud Storage</span>
+<span class="kp-skill-tag">Pub/Sub</span>
+<span class="kp-skill-tag">API Gateway</span>
+<span class="kp-skill-tag">Looker</span>
+<span class="kp-skill-tag">Dataplex</span>
+</div>
+</div>
+<div class="kp-skill-cat">
+<div class="kp-skill-head">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+<span>Cybersecurity</span>
+</div>
+<div class="kp-skill-grid">
+<span class="kp-skill-tag">OPSWAT ICIP</span>
+<span class="kp-skill-tag">Nmap</span>
+<span class="kp-skill-tag">Burp Suite</span>
+<span class="kp-skill-tag">SUID Analysis</span>
+<span class="kp-skill-tag">Reflected XSS</span>
+<span class="kp-skill-tag">OWASP</span>
+</div>
+</div>
+<div class="kp-skill-cat">
+<div class="kp-skill-head">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+<span>Networking</span>
+</div>
+<div class="kp-skill-grid">
+<span class="kp-skill-tag">TCP/IP</span>
+<span class="kp-skill-tag">DNS</span>
+<span class="kp-skill-tag">HTTP</span>
+<span class="kp-skill-tag">Amazon VPC</span>
+<span class="kp-skill-tag">Cisco Packet Tracer</span>
+<span class="kp-skill-tag">Cisco NetAcad</span>
+</div>
+</div>
+<div class="kp-skill-cat">
+<div class="kp-skill-head">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+<span>Programming & Web</span>
+</div>
+<div class="kp-skill-grid">
+<span class="kp-skill-tag">Python</span>
+<span class="kp-skill-tag">Bash</span>
+<span class="kp-skill-tag">C</span>
+<span class="kp-skill-tag">HTML/CSS/JS</span>
+<span class="kp-skill-tag">PHP/MySQL</span>
+<span class="kp-skill-tag">Flask</span>
+<span class="kp-skill-tag">Next.js/React</span>
+<span class="kp-skill-tag">MongoDB</span>
+</div>
+</div>
+<div class="kp-skill-cat">
+<div class="kp-skill-head">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+<span>Platforms & Tools</span>
+</div>
+<div class="kp-skill-grid">
+<span class="kp-skill-tag">Kali Linux</span>
+<span class="kp-skill-tag">Git & GitHub</span>
+<span class="kp-skill-tag">TryHackMe</span>
+<span class="kp-skill-tag">OverTheWire</span>
+<span class="kp-skill-tag">AWS Educate</span>
+<span class="kp-skill-tag">Claude</span>
+</div>
+</div>
+</div>
+
+<div class="kp-section" id="tab-projects">
+<p class="kp-sec-title">Featured projects & hands-on work</p>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">Open Source Contributions — HexaFalls 2</p></div>
+<p class="kp-card-meta">Multiple accepted PRs across 3 repositories</p>
+<ul class="kp-card-bullets"><li>Responsive layout fixes and navbar active-state indicator (HTML/CSS/JS)</li><li>Stats card component in Next.js/React/MongoDB stack</li><li>Reported hardcoded database credentials vulnerability in Event_HUB (PHP/MySQL)</li></ul>
+<div class="kp-tags"><span class="kp-tag">Next.js</span><span class="kp-tag">React</span><span class="kp-tag">MongoDB</span><span class="kp-tag">HTML/CSS/JS</span><span class="kp-tag">PHP/MySQL</span></div>
+</div>
+<div class="kp-card">
+<div class="kp-card-head"><p class="kp-card-title">Penetration Testing Lab</p></div>
+<p class="kp-card-meta">TryHackMe & OverTheWire hands-on training</p>
+<ul class="kp-card-bullets"><li>TryHackMe rooms: Offensive/Defensive Security, DNS, HTTP, Linux Fundamentals</li><li>OverTheWire Bandit challenges up to Level 6-7</li><li>nmap -sV service scans and SUID binary discovery on Kali Linux</li><li>Reflected XSS vulnerability in Flask app with unsanitized query params</li></ul>
+<div class="kp-tags"><span class="kp-tag">Kali Linux</span><span class="kp-tag">Nmap</span><span class="kp-tag">TryHackMe</span><span class="kp-tag">XSS</span><span class="kp-tag">Flask</span></div>
+</div>
+</div>
+
+<div class="kp-section" id="tab-certs">
+<p class="kp-sec-title">Certifications & badges</p>
+<div class="kp-cert-grid">
+<a href="https://anthropic.skilljar.com/ai-fluency-for-students" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--positive)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">AI Fluency for Students</p><p class="kp-cert-issuer">Anthropic · 2026</p></div></div>
+<a href="https://anthropic.skilljar.com/" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--positive)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">Teaching AI Fluency Framework</p><p class="kp-cert-issuer">Anthropic · 2026</p></div></div>
+<a href="https://anthropic.skilljar.com/" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--positive)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">Claude Code in Action</p><p class="kp-cert-issuer">Anthropic · 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div><div class="kp-cert-body"><p class="kp-cert-name">Open Source Connect Global 2026</p><p class="kp-cert-issuer">NexFellow · Contributor · 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--warning)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div class="kp-cert-body"><p class="kp-cert-name">Introduction to CIP (ICIP)</p><p class="kp-cert-issuer">OPSWAT Academy · July 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--positive)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">Networking Basics</p><p class="kp-cert-issuer">Cisco NetAcad · July 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--positive)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">Getting Started with Cisco Packet Tracer</p><p class="kp-cert-issuer">Cisco NetAcad · June 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">AWS SimuLearn: Cloud Computing Essentials</p><p class="kp-cert-issuer">AWS · July 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">AWS SimuLearn: Cloud First Steps</p><p class="kp-cert-issuer">AWS · July 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">AWS Educate: Cloud 101</p><p class="kp-cert-issuer">AWS · July 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">AWS Educate: Storage, Networking, Databases</p><p class="kp-cert-issuer">AWS · July 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">AWS Educate: Cloud Ops, Security, Serverless</p><p class="kp-cert-issuer">AWS · July 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">AWS Educate: ML Foundations & Generative AI</p><p class="kp-cert-issuer">AWS · July 2026</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--chart-2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">Google Cloud: Compute, Storage, Pub/Sub</p><p class="kp-cert-issuer">Google Cloud · Oct–Nov 2025</p></div></div>
+<a href="https://www.credly.com/users/kazi-md-samim-faraj" class="kp-cert" target="_blank" rel="noopener"><div class="kp-cert-icon" style="color:var(--chart-2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="kp-cert-body"><p class="kp-cert-name">Google Cloud: API Gateway, Looker, Dataplex</p><p class="kp-cert-issuer">Google Cloud · Nov 2025</p></div></div>
+</div>
+</div>
+
+<div class="kp-section" id="tab-contact">
+<p class="kp-sec-title">Get in touch</p>
+<div class="kp-contact">
+<a href="mailto:samimkazi716@gmail.com">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+<div><div class="kp-contact-label">Email</div><div class="kp-contact-val">samimkazi716@gmail.com</div></div>
+</a>
+<a href="https://github.com/kazi716" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.193 22 16.442 22 12.017 22 6.484 17.522 2 12 2z"/></svg>
+<div><div class="kp-contact-label">GitHub</div><div class="kp-contact-val">github.com/kazi716</div></div>
+</a>
+<a href="https://linkedin.com/in/kazi-md-samim-faraj" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+<div><div class="kp-contact-label">LinkedIn</div><div class="kp-contact-val">linkedin.com/in/kazi-md-samim-faraj</div></div>
+</a>
+</div>
+<p class="kp-sec-title" style="margin-top:16px">Languages</p>
+<div class="kp-tags">
+<span class="kp-tag">Bengali (Native)</span>
+<span class="kp-tag">English (Proficient)</span>
+<span class="kp-tag">Hindi (Conversational)</span>
+</div>
+</div>
+</div>
+
+<button class="kp-backtop" id="kp-backtop" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 4l-6 6h4v6h4v-6h4l-6-6z" fill="currentColor"/></svg>
+</button>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
