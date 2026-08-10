@@ -73,7 +73,7 @@
           setTimeout(function(){
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-          }, idx * 25);
+          }, idx * 20);
         } else {
           card.style.display = 'none';
         }
@@ -124,7 +124,6 @@
     }
     animateCursor();
 
-    // Hover effects
     var interactives = root.querySelectorAll('a, button, .kp-stat, .kp-card, .kp-cert-card, .kp-skill-tag, .kp-contact a');
     interactives.forEach(function(el){
       el.addEventListener('mouseenter', function(){ cursor.classList.add('hover'); });
@@ -132,7 +131,7 @@
     });
   }
 
-  // ===== ARTISTIC PARTICLE & CONSTELLATION SYSTEM =====
+  // ===== ARTISTIC CONSTELLATION CANVAS =====
   var canvas = document.getElementById('kp-particles');
   if(canvas){
     var ctx = canvas.getContext('2d');
@@ -150,23 +149,23 @@
     window.addEventListener('resize', resizeCanvas);
 
     var colors = [
-      { r: 56, g: 189, b: 248 },   // Cyan accent
-      { r: 129, g: 140, b: 248 },  // Indigo chart-3
-      { r: 192, g: 132, b: 252 },  // Purple chart-4
-      { r: 16, g: 185, b: 129 }    // Emerald positive
+      { r: 78, g: 133, b: 191 },   // Monojit Blue Accent #4E85BF
+      { r: 129, g: 140, b: 248 },  // Indigo
+      { r: 16, g: 185, b: 129 },   // Emerald
+      { r: 192, g: 132, b: 252 }   // Purple
     ];
 
     function createParticle(){
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.65,
-        vy: (Math.random() - 0.5) * 0.65,
-        radius: Math.random() * 2 + 0.5,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 0.5) * 0.6,
+        radius: Math.random() * 1.8 + 0.5,
         color: colors[Math.floor(Math.random() * colors.length)],
-        alpha: Math.random() * 0.5 + 0.15,
+        alpha: Math.random() * 0.45 + 0.15,
         pulse: Math.random() * Math.PI * 2,
-        pulseSpeed: Math.random() * 0.025 + 0.01
+        pulseSpeed: Math.random() * 0.02 + 0.01
       };
     }
 
@@ -181,7 +180,6 @@
         if(p.x < 0 || p.x > canvas.width) p.vx *= -1;
         if(p.y < 0 || p.y > canvas.height) p.vy *= -1;
 
-        // Gravity repulsion from cursor
         if(cursor){
           var dx = p.x - mouseX;
           var dy = p.y - mouseY;
@@ -200,8 +198,7 @@
         ctx.fillStyle = 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',' + Math.max(0, pulseAlpha) + ')';
         ctx.fill();
 
-        // Glowing outer aura for select particles
-        if(p.radius > 1.5){
+        if(p.radius > 1.4){
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.radius * 3, 0, Math.PI * 2);
           var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 3);
@@ -220,12 +217,12 @@
           var dy = particles[i].y - particles[j].y;
           var dist = Math.sqrt(dx * dx + dy * dy);
           if(dist < CONNECTION_DIST){
-            var alpha = (1 - dist / CONNECTION_DIST) * 0.14;
+            var alpha = (1 - dist / CONNECTION_DIST) * 0.12;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.strokeStyle = 'rgba(' + particles[i].color.r + ',' + particles[i].color.g + ',' + particles[i].color.b + ',' + alpha + ')';
-            ctx.lineWidth = 0.6;
+            ctx.lineWidth = 0.5;
             ctx.stroke();
             connections++;
           }
@@ -284,7 +281,7 @@
 
       // HEADER
       y = addText('KAZI MD SAMIM FARAJ', margin, y, 20, 'bold', [15, 23, 42]);
-      y = addText('Cybersecurity & Cloud Engineer', margin, y, 11, 'bold', [56, 189, 248]);
+      y = addText('Cybersecurity & Cloud Engineer', margin, y, 11, 'bold', [78, 133, 191]);
       y = addText('Kolkata, West Bengal, India  |  samimkazi716@gmail.com', margin, y, 9, 'normal', [100, 116, 139]);
       y = addText('GitHub: github.com/kazi716  |  LinkedIn: linkedin.com/in/kazi-md-samim-faraj', margin, y, 9, 'normal', [100, 116, 139]);
       y = addText('Credly ID: 0e8da13e-0d31-461d-acbd-b7761d88f313  |  credly.com/users/kazi-md-samim-faraj', margin, y, 9, 'normal', [100, 116, 139]);
@@ -321,7 +318,7 @@
       y = addText('EXPERIENCE & INTERNSHIPS', margin, y, 12, 'bold', [15, 23, 42]);
       y += 2;
       y = addText('AWS AI-Powered Cloud Engineer Virtual Intern', margin, y, 10, 'bold');
-      y = addText('AICTE-EduSkills  |  June – August 2026  |  Grade O (Outstanding)', margin, y, 9, 'normal', [56, 189, 248]);
+      y = addText('AICTE-EduSkills  |  June – August 2026  |  Grade O (Outstanding)', margin, y, 9, 'normal', [78, 133, 191]);
       y = addBullet('Completed 8-week AWS cloud engineering internship with AI-powered tooling, curriculum by AWS Educate.', margin, y, 9);
       y = addBullet('Certified by AICTE, Ministry of Education with Outstanding Grade O performance.', margin, y, 9);
       y += 3;
