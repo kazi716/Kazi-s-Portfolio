@@ -149,10 +149,10 @@
     window.addEventListener('resize', resizeCanvas);
 
     var colors = [
-      { r: 78, g: 133, b: 191 },   // Monojit Blue Accent #4E85BF
-      { r: 129, g: 140, b: 248 },  // Indigo
-      { r: 16, g: 185, b: 129 },   // Emerald
-      { r: 192, g: 132, b: 252 }   // Purple
+      { r: 255, g: 255, b: 255 },  // Pure White
+      { r: 226, g: 232, b: 240 },  // Silver/Ice
+      { r: 161, g: 161, b: 170 },  // Zinc Grey
+      { r: 200, g: 200, b: 200 }   // Light Grey
     ];
 
     function createParticle(){
