@@ -1,16 +1,16 @@
 :root {
-  --bg: #0a0a0a;
-  --bg-secondary: #121212;
-  --surface: rgba(18, 18, 18, 0.78);
-  --surface-raised: rgba(26, 26, 26, 0.88);
-  --surface-muted: rgba(38, 38, 38, 0.6);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-glow: rgba(78, 133, 191, 0.45);
-  --text-primary: #f5f5f5;
+  --bg: #000000;
+  --bg-secondary: #050505;
+  --surface: rgba(10, 10, 10, 0.65);
+  --surface-raised: rgba(15, 15, 15, 0.85);
+  --surface-muted: rgba(20, 20, 20, 0.5);
+  --border: rgba(255, 255, 255, 0.15);
+  --border-glow: rgba(255, 255, 255, 0.3);
+  --text-primary: #ffffff;
   --text-secondary: #a1a1aa;
   --text-tertiary: #71717a;
-  --accent: #4E85BF;
-  --accent-glow: rgba(78, 133, 191, 0.35);
+  --accent: #e2e8f0;
+  --accent-glow: rgba(226, 232, 240, 0.25);
   --positive: #10b981;
   --positive-glow: rgba(16, 185, 129, 0.35);
   --warning: #f59e0b;
@@ -25,8 +25,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 ::selection {
-  background: var(--accent);
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
 }
 
 /* Subtle editorial ambient background glow */
@@ -40,10 +40,10 @@ body {
   font-family: var(--font-sans);
   background: var(--bg);
   background-image: 
-    radial-gradient(at 0% 0%, rgba(78, 133, 191, 0.12) 0px, transparent 40%),
-    radial-gradient(at 100% 0%, rgba(129, 140, 248, 0.1) 0px, transparent 40%),
-    radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.08) 0px, transparent 40%),
-    radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 40%);
+    radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.05) 0px, transparent 40%),
+    radial-gradient(at 100% 0%, rgba(200, 200, 200, 0.03) 0px, transparent 40%),
+    radial-gradient(at 100% 100%, rgba(255, 255, 255, 0.04) 0px, transparent 40%),
+    radial-gradient(at 0% 100%, rgba(150, 150, 150, 0.03) 0px, transparent 40%);
   background-size: 180% 180%;
   animation: ambientGlow 24s ease infinite;
   color: var(--text-primary);
@@ -155,20 +155,22 @@ body {
 /* Editorial Typography */
 .kp-name {
   font-family: var(--font-serif);
-  font-size: 52px;
+  font-size: 58px;
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1.1;
   margin: 0 0 6px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
   color: #f5f5f5;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 .kp-title {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 22px;
+  font-size: 24px;
   color: var(--accent);
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   font-weight: 400;
+  letter-spacing: 0.03em;
 }
 .kp-loc {
   font-size: 13px;
@@ -381,6 +383,7 @@ body {
   color: var(--text-primary);
   margin: 0 0 18px;
   font-weight: 400;
+  letter-spacing: 0.02em;
   display: flex;
   align-items: center;
   gap: 12px;
