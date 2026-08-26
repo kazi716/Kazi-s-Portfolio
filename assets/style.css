@@ -699,3 +699,22 @@ body {
 #kp-pdf-btn:active { transform: translateY(0); }
 
 #kp-github-card .kp-stat:hover { transform: translateY(-2px); }
+
+/* Footer Attribution */
+.kp-footer {
+  text-align: center;
+  padding: 40px 24px 60px;
+  font-size: 13px;
+  color: var(--text-tertiary);
+  font-family: var(--font-sans);
+}
+.kp-footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.kp-footer a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
