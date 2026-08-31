@@ -283,18 +283,18 @@
 
       // HEADER
       y = addText('KAZI MD SAMIM FARAJ', margin, y, 20, 'bold', [15, 23, 42]);
-      y = addText('Cybersecurity & Cloud Engineer', margin, y, 11, 'bold', [78, 133, 191]);
-      y = addText('Kolkata, West Bengal, India  |  samimkazi716@gmail.com', margin, y, 9, 'normal', [100, 116, 139]);
-      y = addText('GitHub: github.com/kazi716  |  LinkedIn: linkedin.com/in/kazi-md-samim-faraj', margin, y, 9, 'normal', [100, 116, 139]);
-      y = addText('Credly ID: 0e8da13e-0d31-461d-acbd-b7761d88f313  |  credly.com/users/kazi-md-samim-faraj', margin, y, 9, 'normal', [100, 116, 139]);
+      y = addText('Full-Stack Web Developer | Web Applications & APIs', margin, y, 11, 'bold', [78, 133, 191]);
+      y = addText('Kolkata, West Bengal  |  +91-9474301988  |  samimkazi716@gmail.com', margin, y, 9, 'normal', [100, 116, 139]);
+      y = addText('Portfolio: kazi-s-portfolio.vercel.app  |  GitHub: github.com/kazi716', margin, y, 9, 'normal', [100, 116, 139]);
+      y = addText('LinkedIn: linkedin.com/in/kazi-md-samim-faraj  |  Website: kazitechworks.com', margin, y, 9, 'normal', [100, 116, 139]);
       y += 6;
       y = addLine(y);
 
       // SUMMARY
       checkPageBreak(50);
-      y = addText('OBJECTIVE & PROFILE SUMMARY', margin, y, 12, 'bold', [15, 23, 42]);
+      y = addText('PROFESSIONAL SUMMARY', margin, y, 12, 'bold', [15, 23, 42]);
       y += 2;
-      var summary = 'B.Tech CSE student at JIS University with hands-on experience in cybersecurity, cloud computing, and ethical hacking. Holder of 24 verified certifications across AWS Educate, Google Cloud, Cisco NetAcad, OPSWAT Critical Infrastructure Protection, and Anthropic AI Fluency. Active open-source contributor seeking internship opportunities in Cloud Computing, Cybersecurity, or Security Engineering.';
+      var summary = 'Dynamic Full-Stack Web Developer and founder of Kazi Techworks, specializing in building responsive, secure, and scalable web applications and APIs. Uniquely combines modern web development stacks (Next.js, React, MongoDB) with a strong foundation in Cloud Computing (AWS/GCP), Cybersecurity, and Generative AI. Proven ability to deliver full-cycle web projects from frontend UI/UX to secure backend architecture and deployment.';
       var sumLines = doc.splitTextToSize(summary, pageW - margin * 2);
       doc.setFontSize(9.5);
       doc.setFont('helvetica', 'normal');
@@ -303,34 +303,21 @@
       y += (sumLines.length * 11) + 6;
       y = addLine(y);
 
-      // EDUCATION
-      checkPageBreak(80);
-      y = addText('EDUCATION', margin, y, 12, 'bold', [15, 23, 42]);
-      y += 2;
-      y = addText('B.Tech — Computer Science and Engineering  (CGPA: 7.4 ongoing)', margin, y, 10, 'bold');
-      y = addText('JIS University, Kolkata  |  2025 – Present  |  1st Year, 2nd Semester', margin, y, 9, 'normal', [100, 116, 139]);
-      y += 2;
-      y = addText('Class XII — Higher Secondary  |  Shishu Sadan High School (2025)  |  72%', margin, y, 9, 'normal');
-      y = addText('Class X — Secondary  |  Shishu Sadan High School (2023)  |  85%', margin, y, 9, 'normal');
-      y += 6;
-      y = addLine(y);
-
       // EXPERIENCE
       checkPageBreak(120);
-      y = addText('EXPERIENCE & INTERNSHIPS', margin, y, 12, 'bold', [15, 23, 42]);
+      y = addText('PROFESSIONAL EXPERIENCE', margin, y, 12, 'bold', [15, 23, 42]);
       y += 2;
-      y = addText('AWS AI-Powered Cloud Engineer Virtual Intern', margin, y, 10, 'bold');
-      y = addText('AICTE-EduSkills  |  June – August 2026  |  Grade O (Outstanding)', margin, y, 9, 'normal', [78, 133, 191]);
-      y = addBullet('Completed 8-week AWS cloud engineering internship with AI-powered tooling, curriculum by AWS Educate.', margin, y, 9);
-      y = addBullet('Certified by AICTE, Ministry of Education with Outstanding Grade O performance.', margin, y, 9);
+      y = addText('Founder & Full-Stack Web Developer', margin, y, 10, 'bold');
+      y = addText('Kazi Techworks | Kolkata, WB  |  August 2026 – Present', margin, y, 9, 'normal', [78, 133, 191]);
+      y = addBullet('Founded and registered an official IT services micro-enterprise (UDYAM & Trade License certified).', margin, y, 9);
+      y = addBullet('Designing and developing full-stack web applications, RESTful APIs, and responsive user interfaces.', margin, y, 9);
+      y = addBullet('Implementing secure backend architectures, integrating databases, and deploying via Vercel/AWS.', margin, y, 9);
       y += 3;
-      y = addText('Brand Ambassador — LaunchEd Global', margin, y, 10, 'bold');
-      y = addText('LaunchEd Global · JIS University  |  July 2026', margin, y, 9, 'normal', [100, 116, 139]);
-      y = addBullet('Selected as campus brand ambassador; led digital outreach and student awareness programs.', margin, y, 9);
-      y += 3;
-      y = addText('Marketing Intern — Bleep Education', margin, y, 10, 'bold');
-      y = addText('Bleep Education  |  January 2026', margin, y, 9, 'normal', [100, 116, 139]);
-      y = addBullet('Recognized for outstanding performance; certificate endorsed by E-cell IIT Bombay, IIIT-Naya Raipur, and IIT Pune.', margin, y, 9);
+      y = addText('AWS AI-Powered Cloud Engineer Intern', margin, y, 10, 'bold');
+      y = addText('AICTE-EduSkills Virtual Intern  |  June 2026 – August 2026', margin, y, 9, 'normal', [78, 133, 191]);
+      y = addBullet('Completed an 8-week intensive AWS cloud engineering program with AI-powered tooling.', margin, y, 9);
+      y = addBullet('Gained hands-on experience in cloud infrastructure for deploying highly available web apps.', margin, y, 9);
+      y = addBullet('Grade: O (Outstanding) – Certified by AICTE, Ministry of Education.', margin, y, 9);
       y += 6;
       y = addLine(y);
 
@@ -338,28 +325,43 @@
       checkPageBreak(90);
       y = addText('TECHNICAL SKILLS', margin, y, 12, 'bold', [15, 23, 42]);
       y += 2;
-      y = addText('Cloud Platforms: AWS (S3, VPC, RDS, Well-Architected Framework), Google Cloud (Compute Engine, Cloud Storage, Pub/Sub, API Gateway, Looker, Dataplex)', margin, y, 9, 'normal');
-      y = addText('Cybersecurity: OPSWAT Critical Infrastructure Protection (ICIP), Nmap, Burp Suite, SUID Binary Discovery, Reflected XSS Identification', margin, y, 9, 'normal');
-      y = addText('Networking: TCP/IP, DNS, HTTP, Amazon VPC, Cisco Packet Tracer, Cisco NetAcad', margin, y, 9, 'normal');
-      y = addText('Programming & Web: Python (beginner), Bash scripting, C (basic), HTML/CSS/JS, PHP/MySQL (basic), Flask, Next.js/React, MongoDB', margin, y, 9, 'normal');
-      y = addText('Tools & Platforms: Kali Linux, Linux Fundamentals, TryHackMe, OverTheWire Bandit (Level 6-7), AWS Educate, Claude Code', margin, y, 9, 'normal');
+      y = addText('Frontend Development: HTML5, CSS3, JavaScript (ES6+), React.js, Next.js, Responsive UI Design.', margin, y, 9, 'normal');
+      y = addText('Backend & APIs: Node.js, Python (Flask), PHP, RESTful API Development, Bash Scripting.', margin, y, 9, 'normal');
+      y = addText('Databases: MongoDB, MySQL, Database Security & Optimization.', margin, y, 9, 'normal');
+      y = addText('Cloud & DevOps: AWS (S3, VPC, RDS, EC2), Google Cloud Platform, Vercel, Git/GitHub, CI/CD.', margin, y, 9, 'normal');
+      y = addText('Web Security: Vulnerability Analysis, XSS Prevention, SUID analysis, Nmap, Burp Suite.', margin, y, 9, 'normal');
+      y = addText('AI & Prompt Engineering: Generative AI Integration, Claude (Fluency Framework), Agentic Coding.', margin, y, 9, 'normal');
       y += 6;
       y = addLine(y);
 
       // PROJECTS
-      checkPageBreak(100);
-      y = addText('PROJECTS & HANDS-ON WORK', margin, y, 12, 'bold', [15, 23, 42]);
+      checkPageBreak(120);
+      y = addText('KEY WEB DEVELOPMENT PROJECTS', margin, y, 12, 'bold', [15, 23, 42]);
       y += 2;
-      y = addText('Open Source Contributions — HexaFalls 2 Hackathon', margin, y, 10, 'bold');
-      y = addBullet('Implemented responsive layout fixes and navbar active-state indicators (HTML/CSS/JS).', margin, y, 9);
-      y = addBullet('Developed stats card component in Next.js/React/MongoDB stack.', margin, y, 9);
-      y = addBullet('Identified and reported hardcoded database credentials vulnerability in Event_HUB (PHP/MySQL).', margin, y, 9);
+      y = addText('SilentSpot | Full-Stack Web Application (silentspot.vercel.app)', margin, y, 10, 'bold');
+      y = addBullet('Designed and deployed a modern, responsive web application utilizing scalable frontend architecture.', margin, y, 9);
+      y = addBullet('Integrated continuous deployment via Vercel for rapid iteration and reliable uptime.', margin, y, 9);
       y += 3;
-      y = addText('Penetration Testing Lab & Vulnerability Research', margin, y, 10, 'bold');
-      y = addBullet('Completed TryHackMe rooms: Offensive/Defensive Security, DNS, HTTP, Linux Fundamentals.', margin, y, 9);
-      y = addBullet('Solved OverTheWire Bandit wargame challenges up to Level 6-7.', margin, y, 9);
-      y = addBullet('Executed nmap -sV service scans and SUID privilege escalation discovery on Kali Linux.', margin, y, 9);
-      y = addBullet('Identified Reflected XSS vulnerability in Flask application with unsanitized query parameters.', margin, y, 9);
+      y = addText('Personal Developer Portfolio | Interactive Web Resume (kazi-s-portfolio.vercel.app)', margin, y, 10, 'bold');
+      y = addBullet('Built a high-performance, dynamic portfolio website to showcase development projects and skills.', margin, y, 9);
+      y = addBullet('Optimized UI/UX for seamless cross-device compatibility and fast load times.', margin, y, 9);
+      y += 3;
+      y = addText('Ultron | Web Utility / Application (github.com/kazi716/Ultron)', margin, y, 10, 'bold');
+      y = addBullet('Developed functional application logic and structured the repository using version control best practices.', margin, y, 9);
+      y += 3;
+      y = addText('Open Source Contributions — HexaFalls 2 Hackathon', margin, y, 10, 'bold');
+      y = addBullet('Implemented responsive layout fixes and dynamic navbar active-state indicators using HTML/CSS/JS.', margin, y, 9);
+      y = addBullet('Developed a statistics card component utilizing the Next.js, React, and MongoDB stack.', margin, y, 9);
+      y = addBullet('Conducted security audits: Identified and reported a hardcoded database credentials vulnerability.', margin, y, 9);
+      y += 6;
+      y = addLine(y);
+
+      // EDUCATION
+      checkPageBreak(60);
+      y = addText('EDUCATION', margin, y, 12, 'bold', [15, 23, 42]);
+      y += 2;
+      y = addText('B.Tech — Computer Science and Engineering', margin, y, 10, 'bold');
+      y = addText('JIS University, Kolkata | CGPA: 7.4 (ongoing)  |  2025 – Present', margin, y, 9, 'normal', [100, 116, 139]);
       y += 6;
       y = addLine(y);
 
@@ -392,6 +394,7 @@
         'AI Fluency for Students — Anthropic (2026)',
         'Teaching the AI Fluency Framework — Anthropic (2026)',
         'Claude Code in Action — Anthropic (2026)',
+        'Gen AI Tools (Gold Category - 70% and above) — NASSCOM IT-ITeS SSC',
         'Open Source Connect Global 2026 Contributor — NexFellow (2026)'
       ];
 
