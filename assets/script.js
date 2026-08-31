@@ -1,9 +1,8 @@
 (function(){
   var root = document.getElementById('kp-root');
-  var content = document.getElementById('kp-content');
   var nav = document.getElementById('kp-nav');
   var buttons = nav ? nav.querySelectorAll('button') : [];
-  var sections = content ? content.querySelectorAll('.kp-section') : [];
+  var sections = document.querySelectorAll('.kp-section');
   var progress = document.getElementById('kp-progress');
   var backtop = document.getElementById('kp-backtop');
 
@@ -12,23 +11,23 @@
     btn.addEventListener('click', function(){
       var tab = btn.dataset.tab;
       var target = document.getElementById('tab-' + tab);
-      if(target && content){
-        content.scrollTo({ top: target.offsetTop - content.offsetTop, behavior: 'smooth' });
+      if(target){
+        var offset = target.offsetTop - 70; // Account for sticky nav height
+        window.scrollTo({ top: offset, behavior: 'smooth' });
       }
     });
   });
 
   // Scroll spy: highlight nav based on scroll position
   function updateNav(){
-    if(!content || sections.length === 0) return;
-    var scrollTop = content.scrollTop;
-    var contentTop = content.offsetTop;
+    if(sections.length === 0) return;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
     var activeSet = false;
 
     sections.forEach(function(sec, i){
-      var secTop = sec.offsetTop - contentTop;
+      var secTop = sec.offsetTop;
       var secBottom = secTop + sec.offsetHeight;
-      if(scrollTop >= secTop - 60 && scrollTop < secBottom - 60 && !activeSet){
+      if(scrollTop >= secTop - 90 && scrollTop < secBottom - 90 && !activeSet){
         buttons.forEach(function(b){ b.classList.remove('active'); });
         if(buttons[i]) buttons[i].classList.add('active');
         activeSet = true;
@@ -36,7 +35,7 @@
     });
 
     // Progress bar
-    var scrollHeight = content.scrollHeight - content.clientHeight;
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
     if(progress) progress.style.width = pct + '%';
 
@@ -46,12 +45,13 @@
       else { backtop.classList.remove('visible'); }
     }
   }
-  if(content) content.addEventListener('scroll', updateNav);
+  window.addEventListener('scroll', updateNav);
+  window.addEventListener('load', updateNav);
 
   // Back to top
   if(backtop){
     backtop.addEventListener('click', function(){
-      if(content) content.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
