@@ -12,7 +12,8 @@
       var tab = btn.dataset.tab;
       var target = document.getElementById('tab-' + tab);
       if(target){
-        var offset = target.offsetTop - 70; // Account for sticky nav height
+        var rect = target.getBoundingClientRect();
+        var offset = rect.top + window.scrollY - 70; // Account for sticky nav height
         window.scrollTo({ top: offset, behavior: 'smooth' });
       }
     });
@@ -25,7 +26,8 @@
     var activeSet = false;
 
     sections.forEach(function(sec, i){
-      var secTop = sec.offsetTop;
+      var rect = sec.getBoundingClientRect();
+      var secTop = rect.top + window.scrollY;
       var secBottom = secTop + sec.offsetHeight;
       if(scrollTop >= secTop - 90 && scrollTop < secBottom - 90 && !activeSet){
         buttons.forEach(function(b){ b.classList.remove('active'); });
