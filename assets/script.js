@@ -285,7 +285,7 @@
       y = addText('KAZI MD SAMIM FARAJ', margin, y, 20, 'bold', [15, 23, 42]);
       y = addText('Full-Stack Web Developer | Web Applications & APIs', margin, y, 11, 'bold', [78, 133, 191]);
       y = addText('Kolkata, West Bengal  |  +91-9474301988  |  samimkazi716@gmail.com', margin, y, 9, 'normal', [100, 116, 139]);
-      y = addText('Portfolio: kazi-s-portfolio.vercel.app  |  GitHub: github.com/kazi716', margin, y, 9, 'normal', [100, 116, 139]);
+      y = addText('Portfolio: kazi716.me  |  GitHub: github.com/kazi716', margin, y, 9, 'normal', [100, 116, 139]);
       y = addText('LinkedIn: linkedin.com/in/kazi-md-samim-faraj  |  Website: kazitechworks.com', margin, y, 9, 'normal', [100, 116, 139]);
       y += 6;
       y = addLine(y);
@@ -338,11 +338,11 @@
       checkPageBreak(120);
       y = addText('KEY WEB DEVELOPMENT PROJECTS', margin, y, 12, 'bold', [15, 23, 42]);
       y += 2;
-      y = addText('SilentSpot | Full-Stack Web Application (silentspot.vercel.app)', margin, y, 10, 'bold');
+      y = addText('SilentSpot | Full-Stack Web Application (silentspot.app)', margin, y, 10, 'bold');
       y = addBullet('Designed and deployed a modern, responsive web application utilizing scalable frontend architecture.', margin, y, 9);
       y = addBullet('Integrated continuous deployment via Vercel for rapid iteration and reliable uptime.', margin, y, 9);
       y += 3;
-      y = addText('Personal Developer Portfolio | Interactive Web Resume (kazi-s-portfolio.vercel.app)', margin, y, 10, 'bold');
+      y = addText('Personal Developer Portfolio | Interactive Web Resume (kazi716.me)', margin, y, 10, 'bold');
       y = addBullet('Built a high-performance, dynamic portfolio website to showcase development projects and skills.', margin, y, 9);
       y = addBullet('Optimized UI/UX for seamless cross-device compatibility and fast load times.', margin, y, 9);
       y += 3;
